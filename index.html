@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy</title>
+    <!-- tailwind and fontawesome cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/861b2d4cb6.js" crossorigin="anonymous"></script>
+    <style>
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'main-btn': 'rgb(171, 239, 95)',
+                        'sec-btn': 'rgb(14, 122, 129)',
+                        'footer': 'rgb(28,28,28)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <header class="md:container mx-auto px-10">
+        <!-- Navbar starts -->
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start w-full flex justify-between items-center lg:w-1/2">
+                    <a class="font-bold text-xl flex flex-row gap-2"><img src="images/logo.webp" alt="">Peddy</a>
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-2 p-1 shadow">
+                            <li><a>Home</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal font-bold text-lg px-1">
+                        <li><a>Home</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end hidden lg:flex justify-end gap-x-4">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="hero min-h-screen">
+                <div class=" hero-content flex-col lg:flex-col">
+                    <div>
+                        <p
+                            class="py-4 sm:py-6 text-2xl sm:text-lg md:text-lg lg:text-xl font-bold text-[#13131399] text-center">
+                            Bringing Families Together ❤️‍🔥
+                        </p>
+
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center sm:w-3/4 mx-auto text-black">
+                            Your Path to Adoption <br> Starts Here
+                        </h1>
+
+                        <p class="py-4 sm:py-6 text-center text-sm sm:text-base md:text-lg">
+                            Providing a caring home for animals alleviates overcrowding in shelters <br> offers
+                            emotional connection, saving lives now.
+                        </p>
+
+                        <div class="flex justify-center">
+                            <a href="#Best-deals-Section" class=" btn bg-sec-btn text-white font-bold rounded-lg">View
+                                More</a>
+                        </div>
+                        <div>
+                            <img src="images/pet.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adopt Your Best Friend section -->
+        <section class="container mx-auto my-10">
+            <div>
+                <h1 class="text-3xl sm:text-4xl md:text-4xl font-semibold text-center sm:w-3/4 mx-auto text-black">
+                    Adopt Your Best Friend
+                </h1>
+
+                <p class="py-4 sm:py-6  text-[#13131399] text-center text-sm sm:text-base md:text-lg mb-10">
+                    Providing a caring home for animals alleviates overcrowding in shelters <br> offers
+                    emotional connection, saving lives now.
+                </p>
+
+            </div>
+
+
+            <div class="flex flex-col gap-2 lg:flex-row justify-around items-center space-x-1">
+                <button id="dogs-btn" class="btn bg-gray-100 px-2 flex items-center max-w-30 lg:72 md:w-1/5 w-1/3">
+                    <img class="h-8" src="./images/dog1.svg" alt="">
+                    Dogs
+                </button>
+                <button id="cats-btn" class="btn bg-gray-100 px-2 flex items-center max-w-30 lg:72 md:w-1/5 w-1/3">
+                    <img class="h-8" src="./images/cat 1.svg" alt="">
+                    Cats
+                </button>
+                <button id="rabbits-btn" class="btn bg-gray-100 px-2 flex items-center max-w-30 lg:72 md:w-1/5 w-1/3">
+                    <img class="h-8" src="./images/rabbit 1.svg" alt="">
+                    Rabbits
+                </button>
+                <button id="birds-btn" class="btn bg-gray-100 px-2 flex items-center max-w-30 lg:72 md:w-1/5 w-1/3">
+                    <img class="h-8" src="./images/parrot 1.svg" alt="">
+                    Birds
+                </button>
+            </div>
+        </section>
+        </section>
+
+        <section id="Best-deals-Section" class="container mx-auto px-4 py-10">
+            <div class="flex flex-col lg:flex-row justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold mb-6 text-center">Best Deals For You</h2>
+                <button id="sort" class="bg-sec-btn text-white px-4 py-2 rounded-md">Sort by Price</button>
+            </div>
+
+            <!-- Add the spinner and data container here -->
+            <div id="spinner" class="hidden flex justify-center items-center">
+                <span class="loading loading-bars loading-lg"></span>
+            </div>
+            <div id="datashowcontainer" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+                <!-- Dynamic content will go here -->
+            </div>
+
+
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                <div id="pet-deals" class="lg:col-span-3 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                </div>
+
+                <div>
+                    <div id="Liked-Picture"
+                        class="bg-white rounded-lg shadow-lg p-6 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <button class="btn hidden" onclick="customModal.showModal()">open modal</button>
+        <dialog id="customModal" class="modal modal-bottom w-full sm:modal-middle  overflow-auto">
+            <div class="modal-box">
+                <div id="modal-content">
+
+                </div>
+
+            </div>
+        </dialog>
+
+        <dialog id="adoptModal" class="adptmodal">
+            <div class="modal-bottom w-full sm:modal-middle  overflow-auto">
+                <div class="adopt-content text-center text-lg font-semibold">
+                </div>
+            </div>
+        </dialog>
+
+
+        </main>
+        <!-- footer -->
+        <footer class="bg-black text-gray-400 py-16 px-16">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-start">
+                <div class="mb-8 md:mb-0">
+                    <h2 class="text-2xl text-white mb-4 flex items-center">
+                        <span class="mr-2"><img src="images/logo.webp" alt=""></span> Peddy
+                    </h2>
+                    <p>Location: av. Washington 165, NY CA<br>54003</p>
+                    <p>Phone: +31 85 964 47 25</p>
+                    <p>Email: info@yourdomain.com</p>
+                    <p>Opening hours: 9:00 AM - 5:00 PM</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-blue-500">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-blue-500">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="text-red-500">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-pink-500">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-white mb-4">Useful Links</h3>
+                    <ul>
+                        <li>Home</li>
+                        <li>About Us</li>
+                        <li>Animals</li>
+                        <li>Foundation</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-auto">
+                    <h3 class="text-white mb-4">Drop a message</h3>
+                    <input type="email" placeholder="Enter your email"
+                        class="p-2 mb-4 w-full rounded-md bg-gray-800 text-white">
+                    <button class="bg-teal-500 text-white px-4 py-2 rounded-md w-full">Subscribe</button>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
